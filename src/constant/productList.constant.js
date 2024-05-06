@@ -23,4 +23,10 @@ export const productList = [
     price: "Rs. 1499",
     productName: "Charbonyx Stripe Black Shirt",
   },
+  {
+    imagUrl:
+      "https://www.snitch.co.in/cdn/shop/files/4MSS2759-01-M16.jpg?v=1714725710",
+    price: "Rs. 1199",
+    productName: "AzureSharp Black Shirt",
+  },
 ];

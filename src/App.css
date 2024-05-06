@@ -28,7 +28,7 @@ body {
   position: relative;
   left: 0;
   border: 0.1rem solid var(--secondary);
-  min-width: 17rem;
+  min-width: 15.5rem;
   height: 23rem;
   background-color: var(--primary);
   color: #fff;
@@ -48,7 +48,7 @@ body {
 }
 
 .card:first-child {
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 
 .card-content {
@@ -201,7 +201,7 @@ body {
 /* For Js Code */
 .flying-img {
   position: absolute;
-  animation: fly_to_cart 1s ease-in-out;
+  animation: fly_to_cart 1s linear;
 }
 
 @keyframes fly_to_cart {
@@ -209,12 +209,10 @@ body {
     left: 0;
     top: 0;
   }
-  45%,
   50% {
     left: var(--left);
     top: 60px;
   }
-  80%,
   90% {
     left: var(--left);
     top: var(--top);
