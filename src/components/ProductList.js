@@ -1,15 +1,10 @@
 import { productList } from "../constant/productList.constant";
 import "../App.css";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 function ProductList() {
-  const shopping_cart = document.querySelector(".shopping-cart");
-
   const handleAddToCart = (e) => {
+    const shopping_cart = document.querySelector(".shopping-cart");
     shopping_cart.classList.add("active");
-    let product_count =
-      Number(shopping_cart.getAttribute("data-product-count")) || 0;
-    shopping_cart.setAttribute("data-product-count", product_count + 1);
 
     let target_parent = e.target.parentNode.parentNode.parentNode;
     target_parent.style.zIndex = "100";
@@ -39,6 +34,9 @@ function ProductList() {
       target_parent.style.zIndex = "";
       target_parent.removeChild(flying_img);
       shopping_cart.classList.remove("active");
+      let product_count =
+      Number(shopping_cart.getAttribute("data-product-count")) || 0;
+    shopping_cart.setAttribute("data-product-count", product_count + 1);
     }, 1000);
   };
   return (
@@ -67,9 +65,6 @@ function ProductList() {
           );
         })}
       </section>
-      <div className="shopping-cart" data-product-count="0">
-        <ShoppingCartIcon className="cart-icon" />
-      </div>
     </>
   );
 }
